@@ -24,9 +24,7 @@ public class DBDelete {
             connection.setAutoCommit(false);
             statement = connection.createStatement();
             int id = phone.getId();
-            System.out.print("4");
             statement.execute("DELETE FROM phones WHERE id IN ("+id+")");
-            System.out.print("3");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {
@@ -38,13 +36,6 @@ public class DBDelete {
                 }
             }
             throw new DBException("Can't execute SQL");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 
@@ -56,12 +47,8 @@ public class DBDelete {
             connection.setAutoCommit(false);
             statement = connection.createStatement();
             int id = contact.getId();
-            System.out.print("10");
             statement.execute("DELETE FROM phones WHERE peopleId IN ("+id+")");
-            System.out.print("13");
-            System.out.print("9");
             statement.execute("DELETE FROM contact WHERE idcontact IN ("+id+")");
-            System.out.print("8");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {
@@ -73,13 +60,6 @@ public class DBDelete {
                 }
             }
             throw new DBException("Can't execute SQL");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 }

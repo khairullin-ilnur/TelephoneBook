@@ -1,6 +1,7 @@
 package ru.kpfu.itis.telephone_directory.gui;
 
 import ru.kpfu.itis.telephone_directory.contact.Contact;
+import ru.kpfu.itis.telephone_directory.contact.Phone;
 import ru.kpfu.itis.telephone_directory.dbe.DBDelete;
 import ru.kpfu.itis.telephone_directory.dbe.DBException;
 import ru.kpfu.itis.telephone_directory.dbe.DBSelect;
@@ -16,51 +17,29 @@ import static javax.swing.BoxLayout.Y_AXIS;
 /**
  * Created with IntelliJ IDEA.
  * User: Ilnur
- * Date: 11/1/13
- * Time: 3:41 AM
+ * Date: 11/8/13
+ * Time: 3:00 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Contacts extends JPanel {
+public class Phones extends JPanel {
+    private Contact contact;
     private JFrame frame;
     private ArrayList<JPanel> panels = new ArrayList<JPanel>();
 
-    public Contacts(JFrame frame) {
+    public Phones(JFrame frame, Contact contact) {
         this.frame = frame;
+        this.contact = contact;
         setLayout(new BoxLayout(this, Y_AXIS));
         initContent();
     }
 
-    private JButton makeButtonForPreviewContact(final Contact contact) {
-        JButton jButton = new JButton(contact.getName());
+    private JButton makeButtonForPreviewPhone(Phone phone1) {
+        JButton jButton = new JButton(phone1.getNumber());
         jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new JFrame("Telephone");
-                frame1.setLocation(frame.getLocation());
-                frame1.setContentPane(new Phones(frame1, contact));
-                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame1.pack();
-                frame1.setSize(200, 200);
-                frame1.setVisible(true);
-            }
-        });
-        return jButton;
-    }
-
-    private JButton makeButtonForAddNewContact() {
-        JButton jButton = new JButton("Add");
-        jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new JFrame("Telephone");
-                frame1.setLocation(frame.getLocation());
-                frame1.setContentPane(new AddContact(frame1));
-                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame1.pack();
-                frame1.setSize(200, 120);
-                frame1.setVisible(true);
+                System.out.print("Oh!");
             }
         });
         return jButton;
@@ -78,7 +57,20 @@ public class Contacts extends JPanel {
         return jButton;
     }
 
-    private JButton makeButtonForDelContact(final Contact contact) {
+    private JButton makeButtonOk() {
+        JButton jButton = new JButton("Back");
+        jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                frame.dispose();
+            }
+        });
+        return jButton;
+    }
+
+    private JButton makeButtonForDelPhone(final Phone phone) {
         JButton jButton = new JButton("Del.");
         jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
         jButton.addActionListener(new ActionListener() {
@@ -86,7 +78,7 @@ public class Contacts extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 DBDelete dbDelete = new DBDelete();
                 try {
-                    dbDelete.deleteContact(contact);
+                    dbDelete.deletePhone(phone);
                 } catch (DBException e1) {
                     e1.printStackTrace();
                 } finally {
@@ -98,19 +90,19 @@ public class Contacts extends JPanel {
     }
 
     private void initContent() {
-        ArrayList<Contact> contacts;
+        ArrayList<Phone> phones;
         JButton button;
         JPanel jp;
         DBSelect select = new DBSelect();
         try {
-            contacts = select.getContacts();
-            if (!contacts.isEmpty()) {
-                for (Contact x : contacts) {
+            phones = select.getPhones(contact.getId());
+            if (!phones.isEmpty()) {
+                for (Phone x : phones) {
                     jp = new JPanel();
                     jp.setLayout(new GridLayout());
-                    button = makeButtonForPreviewContact(x);
+                    button = makeButtonForPreviewPhone(x);
                     jp.add(button);
-                    button = makeButtonForDelContact(x);
+                    button = makeButtonForDelPhone(x);
                     jp.add(button);
                     panels.add(jp);
                     add(jp);
@@ -120,9 +112,9 @@ public class Contacts extends JPanel {
             e.printStackTrace();
         } finally {
             jp = new JPanel();
-            button = makeButtonForAddNewContact();
-            jp.add(button);
             button = makeButtonForUpDateContact();
+            jp.add(button);
+            button = makeButtonOk();
             jp.add(button);
             panels.add(jp);
             add(jp);

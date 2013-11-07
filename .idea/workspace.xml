@@ -9,7 +9,7 @@
     <file path="/a.html" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383073273878" ignored="false" />
     <file path="/contactsListClass.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383081685386" ignored="false" />
     <file path="/Contact.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383082097012" ignored="false" />
-    <file path="/Phones.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383077038513" ignored="false" />
+    <file path="/Phones.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383867816868" ignored="false" />
     <file path="/DBSelect.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383862702659" ignored="false" />
     <file path="/ContactsListClass2.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383255263799" ignored="false" />
     <file path="/a.sql" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383164664708" ignored="false" />
@@ -27,10 +27,11 @@
     <file path="/ContactsListClass3.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383262583254" ignored="false" />
     <file path="/M.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383260373080" ignored="false" />
     <file path="/P.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383262277376" ignored="false" />
-    <file path="/Contacts.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383864299019" ignored="false" />
+    <file path="/Contacts.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383867287816" ignored="false" />
     <file path="/AddContact.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383862523803" ignored="false" />
     <file path="/StartClass.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383266630617" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383864408637" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383867858877" ignored="false" />
+    <file path="/Phone.java" changelist="ac6adc9e-b9a2-4afb-a0cf-691c84aa1848" time="1383865200741" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +107,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DBSelect.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBSelect.java">
+      <file leaf-file-name="DBDelete.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBDelete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="61" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="60" column="59" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,10 +121,46 @@
       <file leaf-file-name="Contacts.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Contacts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="47" selection-start="3114" selection-end="3114" vertical-scroll-proportion="0.0">
+            <state line="109" column="49" selection-start="3702" selection-end="3770" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#657#666#0" expanded="true" />
+                <element signature="e#728#736#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Phones.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Phones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="45" selection-start="702" selection-end="702" vertical-scroll-proportion="0.042606518">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#810#818#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telephone_book.phones" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..phones">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telephone_book.contact" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..contact">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,34 +168,7 @@
       <file leaf-file-name="StartClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/StartClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="28" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddContact.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/AddContact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1803" selection-end="1803" vertical-scroll-proportion="-0.5764411">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBInsert.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBInsert.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="31" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="24" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,22 +184,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Po.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Pn.form" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Pn.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Form1.form" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/d.form" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/d.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/P.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/ContactsListClass3.java" />
-        <option value="dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..phones" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBInsert.java" />
-        <option value="dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..contact" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/AddContact.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBSelect.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Contacts.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/StartClass.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBInsert.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/AddContact.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Phone.java" />
+        <option value="dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..phones" />
+        <option value="dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..contact" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBDelete.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Contacts.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Phones.java" />
       </list>
     </option>
   </component>
@@ -281,6 +293,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="telephone_directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="telephone_directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,6 +668,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.76638657" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.76638657" order="7" side_tool="false" content_ui="tabs" x="465" y="101" width="435" height="595" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22878788" sideWeight="0.74957985" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.8554622" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -650,13 +685,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2439394" sideWeight="0.74957985" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25042018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25042018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20984848" sideWeight="0.76638657" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.76638657" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -725,42 +759,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="5" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.66748166">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="5" selection-start="2976" selection-end="2976" vertical-scroll-proportion="0.66748166">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/ContactsListClass3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="10" selection-start="1393" selection-end="2016" vertical-scroll-proportion="0.48604652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/ContactsListClass2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="29" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.039534885">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,40 +789,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBInsert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="31" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.0">
+        <state line="52" column="0" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.9119171">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..contact">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="34" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..phones">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="77" selection-start="68" selection-end="68" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+        <state line="14" column="32" selection-start="376" selection-end="376" vertical-scroll-proportion="0.06904762">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Contacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="47" selection-start="3114" selection-end="3114" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#657#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -829,17 +808,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/StartClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+    <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..contact">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e661c8db/1e481a30-0fe0-46d7-86b8-b1621ce1cdeb/telephone_book..phones">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/AddContact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1803" selection-end="1803" vertical-scroll-proportion="-0.5764411">
+        <state line="78" column="27" selection-start="2849" selection-end="2910" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/StartClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/dbe/DBDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="59" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Contacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="49" selection-start="3702" selection-end="3770" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#728#736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/telephone_directory/gui/Phones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="702" selection-end="702" vertical-scroll-proportion="0.042606518">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#810#818#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

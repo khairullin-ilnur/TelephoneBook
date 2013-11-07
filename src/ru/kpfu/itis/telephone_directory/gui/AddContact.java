@@ -49,7 +49,7 @@ public class AddContact extends JPanel {
                     try {
                         bdInsert.insertContact(contact);
                         DBSelect dbSelect = new DBSelect();
-                        int t =  dbSelect.getMaxIdContact();
+                        int t = dbSelect.getMaxIdContact();
                         System.out.print(t);
                         Phone phone1 = new Phone(0, t, 1, phone);
                         try {

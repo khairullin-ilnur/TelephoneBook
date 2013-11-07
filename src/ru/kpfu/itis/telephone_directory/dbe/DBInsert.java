@@ -43,18 +43,13 @@ public class DBInsert {
         Connection connection = DBConnection.connection;
         Statement statement = null;
         try {
-            System.out.print("1");
             connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
             connection.setAutoCommit(false);
-            System.out.print("2");
             statement = connection.createStatement();
-            System.out.print("3");
             int id = phone.getIdUser();
             String number = phone.getNumber();
             int type = phone.getType();
-            System.out.print("4");
             statement.execute("INSERT INTO phones (peopleId, number, type) VALUES (" + id + ", '" + number + "', " + type + ")");
-            System.out.print("5");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {
