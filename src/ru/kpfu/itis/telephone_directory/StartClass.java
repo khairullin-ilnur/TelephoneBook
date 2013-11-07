@@ -19,6 +19,6 @@ public class StartClass {
         frame.setContentPane(new Contacts(frame));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setSize(200,250);
+        frame.setSize(200,700);
         frame.setVisible(true);
     }}

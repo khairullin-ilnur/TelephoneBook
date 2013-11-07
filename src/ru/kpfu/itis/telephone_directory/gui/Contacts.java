@@ -20,7 +20,7 @@ import static javax.swing.BoxLayout.Y_AXIS;
  */
 public class Contacts extends JPanel {
     private JFrame frame;
-    private ArrayList<Contact> contacts;
+    private ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public Contacts(JFrame frame) {
         this.frame = frame;
@@ -35,7 +35,6 @@ public class Contacts extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.print("Oh!");
-                clearContent();
             }
         });
         return jButton;
@@ -59,27 +58,52 @@ public class Contacts extends JPanel {
         return jButton;
     }
 
+    private JButton makeButtonForUpDateContact() {
+        JButton jButton = new JButton("UpDate contact list.");
+        jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                upDateContent();
+            }
+        });
+        return jButton;
+    }
+
     private void initContent() {
+        ArrayList<Contact> contacts;
+        JButton button;
         DBSelect select = new DBSelect();
         try {
             contacts = select.getContacts();
+            System.out.print("4");
             if (!contacts.isEmpty()) {
                 for (Contact x : contacts) {
-                    add(makeButtonForPreviewContact(x));
+                    System.out.print("5");
+                    button = makeButtonForPreviewContact(x);
+                    buttons.add(button);
+                    add(button);
                 }
             }
         } catch (DBException e) {
             e.printStackTrace();
         } finally {
-            add(makeButtonForAddNewContact());
+            button = makeButtonForAddNewContact();
+            buttons.add(button);
+            add(button);
+            button = makeButtonForUpDateContact();
+            buttons.add(button);
+            add(button);
         }
     }
 
-    private void clearContent(){
-        if (!contacts.isEmpty()) {
-            for (Contact x : contacts) {
-                remove(makeButtonForPreviewContact(x));
+    private void upDateContent() {
+        if (!buttons.isEmpty()) {
+            for (JButton x : buttons) {
+                remove(x);
             }
         }
+        initContent();
+        updateUI();
     }
 }
