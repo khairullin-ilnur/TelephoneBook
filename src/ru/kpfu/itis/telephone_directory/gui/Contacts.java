@@ -20,6 +20,7 @@ import static javax.swing.BoxLayout.Y_AXIS;
  */
 public class Contacts extends JPanel {
     private JFrame frame;
+    private ArrayList<Contact> contacts;
 
     public Contacts(JFrame frame) {
         this.frame = frame;
@@ -34,6 +35,7 @@ public class Contacts extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.print("Oh!");
+                clearContent();
             }
         });
         return jButton;
@@ -47,11 +49,10 @@ public class Contacts extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 JFrame frame1 = new JFrame("Telephone");
                 frame1.setLocation(frame.getLocation());
-                frame1.setContentPane(new AddContact(frame1, frame));
+                frame1.setContentPane(new AddContact(frame1));
                 frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame1.pack();
                 frame1.setSize(200, 120);
-                frame.setVisible(false);
                 frame1.setVisible(true);
             }
         });
@@ -60,7 +61,6 @@ public class Contacts extends JPanel {
 
     private void initContent() {
         DBSelect select = new DBSelect();
-        ArrayList<Contact> contacts;
         try {
             contacts = select.getContacts();
             if (!contacts.isEmpty()) {
@@ -72,6 +72,14 @@ public class Contacts extends JPanel {
             e.printStackTrace();
         } finally {
             add(makeButtonForAddNewContact());
+        }
+    }
+
+    private void clearContent(){
+        if (!contacts.isEmpty()) {
+            for (Contact x : contacts) {
+                remove(makeButtonForPreviewContact(x));
+            }
         }
     }
 }

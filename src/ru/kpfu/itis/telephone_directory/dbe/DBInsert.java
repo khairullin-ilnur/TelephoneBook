@@ -15,7 +15,8 @@ import java.sql.Statement;
  * To change this template use File | Settings | File Templates.
  */
 public class DBInsert {
-    public void insert(Contact contact, Phone phone) throws DBException {
+
+    public void insertContact(Contact contact) throws DBException {
         Connection connection = DBConnection.connection;
         Statement statement = null;
         try {
@@ -23,15 +24,7 @@ public class DBInsert {
             connection.setAutoCommit(false);
             statement = connection.createStatement();
             String name = contact.getName();
-            System.out.print("2");
             statement.execute("INSERT INTO contact (contactcol) VALUE ('" + name + "')");
-            System.out.print("1");
-            int id = phone.getId();
-            String number = phone.getNumber();
-            int type = phone.getType();
-            System.out.print("4");
-            statement.execute("INSERT INTO phones (peopleId, number, type) VALUES (" + id + ", '" + number + "', '" + type + "')");
-            System.out.print("3");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {
@@ -43,14 +36,63 @@ public class DBInsert {
                 }
             }
             throw new DBException("Can't execute SQL");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 
+    public void insertPhone(Phone phone) throws DBException {
+        Connection connection = DBConnection.connection;
+        Statement statement = null;
+        try {
+            System.out.print("1");
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+            connection.setAutoCommit(false);
+            System.out.print("2");
+            statement = connection.createStatement();
+            System.out.print("3");
+            int id = phone.getIdUser();
+            String number = phone.getNumber();
+            int type = phone.getType();
+            System.out.print("4");
+            statement.execute("INSERT INTO phones (peopleId, number, type) VALUES (" + id + ", '" + number + "', " + type + ")");
+            System.out.print("5");
+            connection.commit();
+        } catch (SQLException e) {
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                    throw new RuntimeException("Can't rollback connection");
+                }
+            }
+            throw new DBException("Can't execute SQL");
+        }
+    }
+
+    public void insert(Contact contact, Phone phone) throws DBException {
+        Connection connection = DBConnection.connection;
+        Statement statement = null;
+        try {
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+            connection.setAutoCommit(false);
+            statement = connection.createStatement();
+            String name = contact.getName();
+            statement.execute("INSERT INTO contact (contactcol) VALUE ('" + name + "')");
+            int id = phone.getIdUser();
+            String number = phone.getNumber();
+            int type = phone.getType();
+            statement.execute("INSERT INTO phones (peopleId, number, type) VALUES (" + id + ", '" + number + "', " + type + ")");
+            connection.commit();
+        } catch (SQLException e) {
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                    throw new RuntimeException("Can't rollback connection");
+                }
+            }
+            throw new DBException("Can't execute SQL");
+        }
+    }
 }

@@ -46,16 +46,38 @@ public class DBSelect {
                 }
             }
             throw new DBException("Can't execute SQL: select " + idContact + " from phones");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 
+    public int getMaxIdContact() throws DBException {
+        Connection connection = DBConnection.connection;
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+            connection.setAutoCommit(false);
+            statement = connection.createStatement();
+            System.out.print("1");
+            resultSet = statement.executeQuery("SELECT max(idcontact) from contact");
+            System.out.print("2");
+            int idcontact = 0;
+            while (resultSet.next()) {
+                idcontact = resultSet.getInt("max(idcontact)");
+            }
+            connection.commit();
+            return idcontact;
+        } catch (SQLException e) {
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                    throw new RuntimeException("Can't rollback connection");
+                }
+            }
+            throw new DBException("Can't execute SQL: select max idContact from contact");
+        }
+    }
 
     public ArrayList<Contact> getContacts() throws DBException {
         Connection connection = DBConnection.connection;
@@ -84,13 +106,6 @@ public class DBSelect {
                 }
             }
             throw new DBException("Can't execute SQL: select * from contact");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 }

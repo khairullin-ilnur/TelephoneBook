@@ -2253,6 +2253,7 @@
       <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="number" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id,peopleId"/>
+      <foreign-key name="fk_people_id" columns="peopleId" ref-table="contact" ref-schema="" ref-catalog="telephone_book" ref-columns="idcontact" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="peopleId" columns="peopleId" ref-table="contact" ref-schema="" ref-catalog="telephone_book" ref-columns="idcontact" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="peopleId_idx" unique="false" columns="peopleId"/>
     </table>
