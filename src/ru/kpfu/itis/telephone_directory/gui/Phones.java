@@ -5,6 +5,7 @@ import ru.kpfu.itis.telephone_directory.contact.Phone;
 import ru.kpfu.itis.telephone_directory.dbe.DBDelete;
 import ru.kpfu.itis.telephone_directory.dbe.DBException;
 import ru.kpfu.itis.telephone_directory.dbe.DBSelect;
+import ru.kpfu.itis.telephone_directory.dbe.DBUpdate;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,12 +37,6 @@ public class Phones extends JPanel {
     private JButton makeButtonForPreviewPhone(Phone phone1) {
         JButton jButton = new JButton(phone1.getNumber());
         jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.print("Oh!");
-            }
-        });
         return jButton;
     }
 
@@ -89,6 +84,24 @@ public class Phones extends JPanel {
         return jButton;
     }
 
+    private JButton makeButtonForRedPhone(final Phone phone) {
+        JButton jButton = new JButton("Red.");
+        jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame1 = new JFrame("Telephone");
+                frame1.setLocation(frame.getLocation());
+                frame1.setContentPane(new RedactPhone(frame1, phone));
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.pack();
+                frame1.setSize(200, 100);
+                frame1.setVisible(true);
+            }
+        });
+        return jButton;
+    }
+
     private void initContent() {
         ArrayList<Phone> phones;
         JButton button;
@@ -103,6 +116,8 @@ public class Phones extends JPanel {
                     button = makeButtonForPreviewPhone(x);
                     jp.add(button);
                     button = makeButtonForDelPhone(x);
+                    jp.add(button);
+                    button = makeButtonForRedPhone(x);
                     jp.add(button);
                     panels.add(jp);
                     add(jp);

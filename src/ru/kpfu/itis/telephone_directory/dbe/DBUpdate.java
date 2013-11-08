@@ -40,13 +40,6 @@ public class DBUpdate {
                 }
             }
             throw new DBException("Can't execute SQL");
-        } finally {
-            if (connection != null)
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
         }
     }
 }

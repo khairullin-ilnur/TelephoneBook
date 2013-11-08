@@ -41,7 +41,7 @@ public class Contacts extends JPanel {
                 frame1.setContentPane(new Phones(frame1, contact));
                 frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame1.pack();
-                frame1.setSize(200, 200);
+                frame1.setSize(350, 220);
                 frame1.setVisible(true);
             }
         });

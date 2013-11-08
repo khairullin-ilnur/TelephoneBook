@@ -43,4 +43,8 @@ public class Phone {
     public String toString() {
         return "" + number;
     }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 }
