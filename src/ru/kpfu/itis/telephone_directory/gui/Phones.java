@@ -65,6 +65,24 @@ public class Phones extends JPanel {
         return jButton;
     }
 
+    private JButton makeButtonForInsert() {
+        JButton jButton = new JButton("Add");
+        jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame1 = new JFrame("Telephone");
+                frame1.setLocation(frame.getLocation());
+                frame1.setContentPane(new AddPhone(frame1, contact));
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.pack();
+                frame1.setSize(200, 100);
+                frame1.setVisible(true);
+            }
+        });
+        return jButton;
+    }
+
     private JButton makeButtonForDelPhone(final Phone phone) {
         JButton jButton = new JButton("Del.");
         jButton.setAlignmentX(jButton.CENTER_ALIGNMENT);
@@ -130,6 +148,8 @@ public class Phones extends JPanel {
             button = makeButtonForUpDateContact();
             jp.add(button);
             button = makeButtonOk();
+            jp.add(button);
+            button = makeButtonForInsert();
             jp.add(button);
             panels.add(jp);
             add(jp);
