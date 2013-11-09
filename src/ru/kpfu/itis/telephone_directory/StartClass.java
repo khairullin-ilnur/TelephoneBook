@@ -13,12 +13,13 @@ import javax.swing.*;
  */
 public class StartClass {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Telephone");
-        frame.setLocation(0,50);
+        frame.setLocation(0, 50);
         frame.setContentPane(new Contacts(frame));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setSize(200,700);
+        frame.setSize(200, 700);
         frame.setVisible(true);
-    }}
+    }
+}

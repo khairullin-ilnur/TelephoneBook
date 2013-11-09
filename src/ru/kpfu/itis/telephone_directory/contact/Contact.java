@@ -1,6 +1,5 @@
 package ru.kpfu.itis.telephone_directory.contact;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.ArrayList;
 
 /**

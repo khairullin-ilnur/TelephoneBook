@@ -24,7 +24,7 @@ public class DBDelete {
             connection.setAutoCommit(false);
             statement = connection.createStatement();
             int id = phone.getId();
-            statement.execute("DELETE FROM phones WHERE id IN ("+id+")");
+            statement.execute("DELETE FROM phones WHERE id IN (" + id + ")");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {
@@ -47,8 +47,8 @@ public class DBDelete {
             connection.setAutoCommit(false);
             statement = connection.createStatement();
             int id = contact.getId();
-            statement.execute("DELETE FROM phones WHERE peopleId IN ("+id+")");
-            statement.execute("DELETE FROM contact WHERE idcontact IN ("+id+")");
+            statement.execute("DELETE FROM phones WHERE peopleId IN (" + id + ")");
+            statement.execute("DELETE FROM contact WHERE idcontact IN (" + id + ")");
             connection.commit();
         } catch (SQLException e) {
             if (connection != null) {

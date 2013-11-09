@@ -1,10 +1,7 @@
 package ru.kpfu.itis.telephone_directory.gui;
 
-import ru.kpfu.itis.telephone_directory.contact.Contact;
 import ru.kpfu.itis.telephone_directory.contact.Phone;
 import ru.kpfu.itis.telephone_directory.dbe.DBException;
-import ru.kpfu.itis.telephone_directory.dbe.DBInsert;
-import ru.kpfu.itis.telephone_directory.dbe.DBSelect;
 import ru.kpfu.itis.telephone_directory.dbe.DBUpdate;
 
 import javax.swing.*;

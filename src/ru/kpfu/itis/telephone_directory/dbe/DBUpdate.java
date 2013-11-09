@@ -1,6 +1,5 @@
 package ru.kpfu.itis.telephone_directory.dbe;
 
-import ru.kpfu.itis.telephone_directory.contact.Contact;
 import ru.kpfu.itis.telephone_directory.contact.Phone;
 
 import java.sql.Connection;
