@@ -5,7 +5,6 @@ import ru.kpfu.itis.telephone_directory.contact.Phone;
 import ru.kpfu.itis.telephone_directory.dbe.DBDelete;
 import ru.kpfu.itis.telephone_directory.dbe.DBException;
 import ru.kpfu.itis.telephone_directory.dbe.DBSelect;
-import ru.kpfu.itis.telephone_directory.dbe.DBUpdate;
 
 import javax.swing.*;
 import java.awt.*;
